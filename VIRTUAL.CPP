@@ -1,34 +1,30 @@
-//PROGRAM TO DEMOSTRATE VIRTUALFUNCTION
-
 #include<iostream.h>
 #include<conio.h>
 class base
 {
-	public:
-		virtual void show();
+public:
+virtual void print()
+{
+cout<<"Print base class\n";
+}
 };
 class derived:public base
 {
-	public:
-		void show();
+public:
+void print()
+{
+cout<<"Print derived class\n";
+}
 };
-void base::show()
-{
-	cout<<"base class function called"<<endl;
-}
-void derived::show()
-{
-	cout<<"derived class function called"<<endl;
-}
 void main()
 {
-	clrscr();
-	base*ptr;
-	base B;
-	derived D;
-       //ptr=&B;
-       //ptr->show;
-	ptr=&D;
-	ptr->show();
-	getch();
+clrscr();
+base *b;
+base b1;
+b=&b1;
+b->print();
+derived d;
+b=&d;
+b->print();
+getch();
 }
